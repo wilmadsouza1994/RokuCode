@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="GridScene" extends="Group"  initialFocus="RowList">
+    <script type="text/brightscript" uri="GridScene.brs" />
+	 <interface>
+        <field id="content" type="node" alias="RowList.content" />
+         <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="RowList.rowItemSelected" />
+        <field id="RowItem" type="intarray" alias="RowList.jumpToRowItem" />
+    </interface>
+    <children>
+         <Poster
+            id="thumbnail"
+            loadDisplayMode="scaleToFit"
+            width="999"
+            height="495"
+            loadWidth="999"
+            loadHeight="495"
+            translation="[400,0]"
+        />
+        <Poster uri="pkg:/images/customOverlay.png" loadDisplayMode="scaleToFit" width="1282"  height="719"  translation="[0,0]"/>
+
+        <Label id="titleLabel" width="507" translation="[132,120]">
+        <Font role="font" uri="pkg:/fonts/Avenir/Avenir-Medium.ttf" size="40"/>
+        </Label>
+
+        <Label id="releasedate" width="302" translation="[132,191]">
+        <Font role="font" uri="pkg:/fonts/AvenirNextBold/AvenirNext-Bold.ttf" size="20"/>
+        </Label>
+
+        <Label id="quality" width="149" translation="[281,191]"> 
+        <Font role="font" uri="pkg:/fonts/AvenirNextBold/AvenirNext-Bold.ttf" size="20"/>
+        </Label>
+
+        <Label id="descriptionLabel" wrap="true" width="530" numLines="3" translation="[129,220]" >
+        <Font role="font" uri="pkg:/fonts/Avenir/Avenir-Heavy.ttf" size="20"/>
+        </Label>
+
+        <Label id="genre" width="100" translation="[130,320]">
+        <Font role="font" uri="pkg:/fonts/Avenir/Avenir-MediumOblique.ttf" size="20"/>
+        </Label>
+
+        <RowList showRowCounter="[true]"  itemComponentName="RowListItem" id="rowList"
+        translation="[82,349]"  numRows="2" rowitemSize="[[322,182]]" rowItemSpacing="[[21,0]]"
+        itemSize="[1100,270]" rowLabelOffset="[[50,20]]" focusXOffset="[50]" showRowLabel="[true]"
+         rowFocusAnimationStyle="floatingfocus" />
+    </children>
+</component>

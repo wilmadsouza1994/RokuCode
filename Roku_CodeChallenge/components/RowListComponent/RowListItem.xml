@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="RowListItem" extends="Group">
+    <interface>
+      <field id="itemContent" type="node" onChange="OnContent" />
+    </interface>
+    <script type="text/brightscript" uri="RowListItem.brs" />
+    <children>
+        <Poster
+        uri="pkg:/images/bottomgradient.png"
+            id="poster"
+            loadDisplayMode="scaleToFit"
+            width="320"
+            height="180"
+            loadWidth="320"
+            loadHeight="180"
+        />
+        <Label
+        id="title"
+        width="285"
+        height="60"
+        wrap="true"
+        translation="[20,150]"
+        >
+        <Font role="font" uri="pkg:/fonts/Avenir/Avenir-Roman.ttf" size="22" />
+        </Label>
+    </children>
+</component>
